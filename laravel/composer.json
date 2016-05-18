@@ -19,9 +19,11 @@
         "classmap": [
             "database"
         ],
+        "files": ["tools/SyntacticSugar.php"],
         "psr-4": {
             "App\\": "app/"
         }
+
     },
     "autoload-dev": {
         "classmap": [
