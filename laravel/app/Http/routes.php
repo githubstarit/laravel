@@ -14,3 +14,6 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+/*控制面板*/
+Route::get('/admin', 'Admin\ConsoleController@getIndex');
