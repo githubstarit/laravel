@@ -12,7 +12,7 @@ use App\Http\Controllers\Controller;
 
 /**
  * 后台基础类库
- * Class AdminController
+ * Class AuthController
  * @package App\Http\Controllers\Admin
  */
 class AdminController extends Controller{

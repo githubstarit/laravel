@@ -4,10 +4,10 @@ namespace App\Http\Controllers\Admin;
 
 /**
  * 后台控制台
- * Class ConsoleController
+ * Class AdminConsoleController
  * @package app\Http\Controllers\Admin
  */
-class ConsoleController extends AdminController
+class AdminConsoleController extends AdminController
 {
 
     /**

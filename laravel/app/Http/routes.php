@@ -15,5 +15,15 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-/*控制面板*/
-Route::get('/admin', 'Admin\ConsoleController@getIndex');
+Route::group(['prefix' => 'admin', 'namespace' => 'Admin', 'middleware' => 'auth'], function()
+{
+    /*控制面板*/
+    Route::get('/', 'AdminConsoleController@getIndex');
+});
+
+// 认证路由...
+Route::get('auth/login', 'Auth\AuthController@getLogin');
+Route::post('auth/login', 'Auth\AuthController@postLogin');
+Route::get('auth/logout', 'Auth\AuthController@getLogout');
+
+
