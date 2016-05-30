@@ -10,9 +10,9 @@ class Authenticate
     /**
      * Handle an incoming request.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \Closure  $next
-     * @param  string|null  $guard
+     * @param  \Illuminate\Http\Request  $request 请求数据
+     * @param  \Closure  $next 回调下一个操作
+     * @param  string|null  $guard : admin or web
      * @return mixed
      */
     public function handle($request, Closure $next, $guard = null)
@@ -21,7 +21,11 @@ class Authenticate
             if ($request->ajax() || $request->wantsJson()) {
                 return response('Unauthorized.', 401);
             } else {
-                return redirect()->guest('login');
+                if($guard == 'admin') {
+                    return redirect()->guest('admin/login');
+                }else{
+                    return redirect()->guest('login');
+                }
             }
         }
 

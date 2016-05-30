@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers\Admin;
 
+use Auth;
+
 /**
  * 后台控制台
  * Class AdminConsoleController
@@ -16,6 +18,10 @@ class AdminConsoleController extends AdminController
      */
     public function getIndex()
     {
-        return view('admin.console');
+        $admin = Auth::guard('admin')->user();
+        $data  = [
+            'user'=>$admin,
+        ];
+        return view('admin.console', $data);
     }
 }
