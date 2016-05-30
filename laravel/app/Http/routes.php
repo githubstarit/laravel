@@ -39,26 +39,26 @@ Route::group(['prefix' => 'admin', 'namespace' => 'Admin'], function()
 Route::group(['namespace' => 'Pc'], function()
 {
     //定义了注册登录路由
-//    Route::auth();
+    Route::auth();
 
     //首页
     Route::get('/', 'IndexController@index');
 
-    //登陆
-    Route::get('login', 'Auth\AuthController@getLogin');
-    Route::post('login', 'Auth\AuthController@postLogin');
-    //登出
-    Route::get('logout', 'Auth\AuthController@getLogout');
-    //注册
-    Route::get('register', 'Auth\AuthController@getRegister');
-    Route::post('register', 'Auth\AuthController@postRegister');
-
-    Route::get('password/reset', 'Auth\PasswordController@getReset');
-    Route::post('password/reset', 'Auth\PasswordController@postReset');
-
-    Route::get('password/getEmail', 'Auth\PasswordController@getEmail');
-    Route::post('password/getEmail', 'Auth\PasswordController@postEmail');
-
+//    //登陆
+//    Route::get('login', 'Auth\AuthController@getLogin');
+//    Route::post('login', 'Auth\AuthController@postLogin');
+//    //登出
+//    Route::get('logout', 'Auth\AuthController@getLogout');
+//    //注册
+//    Route::get('register', 'Auth\AuthController@getRegister');
+//    Route::post('register', 'Auth\AuthController@postRegister');
+//
+//    Route::get('password/reset', 'Auth\PasswordController@getReset');
+//    Route::post('password/reset', 'Auth\PasswordController@postReset');
+//
+//    Route::get('password/Email', 'Auth\PasswordController@getEmail');
+//    Route::post('password/Email', 'Auth\PasswordController@postEmail');
+//
 
 
 

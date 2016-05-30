@@ -8,6 +8,8 @@ use Illuminate\Foundation\Auth\ResetsPasswords;
 
 class PasswordController extends PcController
 {
+
+    protected $linkRequestView = 'pc.auth.passwords.email';
     /*
     |--------------------------------------------------------------------------
     | Password Reset Controller
